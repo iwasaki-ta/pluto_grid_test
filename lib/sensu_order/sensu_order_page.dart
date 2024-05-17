@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pluto_grid_test/_component/form_card.dart';
 import 'package:pluto_grid_test/home/home_page.dart';
 
 import '../_component/common_button.dart';
@@ -128,7 +129,6 @@ class SensuOrderPage extends StatelessWidget {
                                       onPressed: () {
                                         // Navigator.of(context).popUntil(ModalRoute.withName('/login/home'));
                                         Navigator.popUntil(context, (Route<dynamic> route) => route.settings.name == '/home');
-
                                       },
                                       child: const Text(
                                         'ホーム画面へ',
@@ -154,6 +154,36 @@ class SensuOrderPage extends StatelessWidget {
                   },
                 );
               },
+            ),
+            FormCard(
+              title: 'kataoka',
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        '本',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ),
+                  ],
+                ),
+                Text('kataoka111'),
+                Text('kataoka222'),
+                Text('kataoka157'),
+                Text('kataoka122'),
+              ],
             ),
           ],
         ),
