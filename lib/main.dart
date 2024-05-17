@@ -1,8 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:pluto_grid/pluto_grid.dart';
+import 'package:pluto_grid_test/add_event/add_event_page.dart';
+import 'package:pluto_grid_test/approval/approval_page.dart';
 import 'package:pluto_grid_test/attendance_schedule/attendance_schedule_page.dart';
 import 'package:pluto_grid_test/participants_list_data.dart';
 import 'package:pluto_grid_test/registration/registration_page.dart';
@@ -15,6 +16,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:pluto_grid_test/sensu_order/sensu_order_page.dart';
 import 'package:pluto_grid_test/sign_up_complete/sign_up_complete_page.dart';
 import 'package:pluto_grid_test/splash_screen/splash_screen.dart';
+import 'package:pluto_grid_test/add_event/add_event_page.dart';
 
 import 'home/home_page.dart';
 
@@ -92,6 +94,8 @@ void main() {
         '/attendance_schedule': (context) => AttendanceSchedulePage(),
         '/registration_complete': (context) => const RegistrationCompletePage(),
         '/sensu': (context) => const SensuOrderPage(),
+        '/approval': (context) => const ApprovalPage(),
+        '/addEvent': (context)=> const AddEventPage(),
       },
     ),
   );

@@ -85,12 +85,16 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 10),
                 BigButton(
                   text: '参加者承認',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/approval');
+                  },
                 ),
                 const SizedBox(height: 10),
                 BigButton(
                   text: 'イベント日登録',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/addEvent');
+                  },
                 ),
                 const SizedBox(height: 10),
               ],

@@ -31,7 +31,7 @@ class EventItem extends StatelessWidget {
             ),
           ),
           const Expanded(
-            flex: 3,
+            flex: 5,
             child: Text(
               'イベント名',
               style: TextStyle(fontSize: 20),
@@ -40,21 +40,36 @@ class EventItem extends StatelessWidget {
           Expanded(
             child: GestureDetector(
               onTap: onCircleTap,
-              child: Icon(
+              child: Text('〇',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: isCircleSelected ? const Color(0xFFa61746) : Colors.grey,
+                ),
+              ),
+              /*Icon(
                 Icons.radio_button_unchecked,
                 color: isCircleSelected ? const Color(0xFFa61746) : Colors.grey,
                 size: 35,
-              ),
+              ),*/
             ),
           ),
+          const SizedBox(width: 10),
           Expanded(
             child: GestureDetector(
               onTap: onCrossTap,
-              child: Icon(
+              child: Text('✕',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: isCrossSelected ? const Color(0xFFa61746) : Colors.grey,
+                ),
+              ),
+              /*Icon(
                 Icons.clear_rounded,
                 color: isCrossSelected ? const Color(0xFFa61746) : Colors.grey,
                 size: 40,
-              ),
+              ),*/
             ),
           ),
         ],
