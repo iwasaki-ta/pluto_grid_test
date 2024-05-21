@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pluto_grid_test/_component/form_card.dart';
 import 'package:pluto_grid_test/home/home_page.dart';
 
 import '../_component/common_button.dart';
+import '../_component/app_form_card.dart';
 
 class SensuOrderPage extends StatelessWidget {
   const SensuOrderPage({super.key});
@@ -155,7 +155,7 @@ class SensuOrderPage extends StatelessWidget {
                 );
               },
             ),
-            FormCard(
+            AppFormCard(
               title: 'kataoka',
               children: [
                 Row(

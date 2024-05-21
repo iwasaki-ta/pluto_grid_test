@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class FormCard extends StatelessWidget {
+class AppFormCard extends StatelessWidget {
   /// 通常のカード
-  const FormCard({
+  const AppFormCard({
     super.key,
     required this.title,
     required this.children,
@@ -10,7 +10,7 @@ class FormCard extends StatelessWidget {
   });
 
   /// 一番下のカード
-  const FormCard.last({
+  const AppFormCard.last({
     super.key,
     required this.title,
     required this.children,
@@ -31,7 +31,7 @@ class FormCard extends StatelessWidget {
           color: Colors.white,
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               Align(
@@ -41,8 +41,13 @@ class FormCard extends StatelessWidget {
                   style: const TextStyle(fontSize: 30),
                 ),
               ),
-              const SizedBox(height: 10),
-              for (var widget in children) widget,
+              const SizedBox(height: 20),
+              for (var widget in children) ...{
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: widget,
+                ),
+              }
             ],
           ),
         ),
