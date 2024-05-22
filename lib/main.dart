@@ -84,6 +84,12 @@ void main() {
       supportedLocales: const [
         Locale('ja', 'JP'),
       ],
+      theme: ThemeData(
+        fontFamily: 'NotoSansJP',
+        inputDecorationTheme: const InputDecorationTheme(
+          errorStyle: TextStyle(fontSize: 18),
+        ),
+      ),
       routes: {
         '/': (context) => const SplashScreen(),
         '/login': (context) => const LoginPage(),

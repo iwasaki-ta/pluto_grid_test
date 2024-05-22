@@ -38,7 +38,7 @@ class AppFormCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   title,
-                  style: const TextStyle(fontSize: 30),
+                  style: const TextStyle(fontSize: 32),
                 ),
               ),
               const SizedBox(height: 20),
